@@ -20,14 +20,29 @@ app.use((req, res, next) => {
   next();
 });
 
+// Function to format date 
+const formatDate = (date) => {
+        
+    const pad = (n) => (n < 10 ? `0${n}` : n);
+
+    const day = pad(date.getDate());
+    const month = pad(date.getMonth() + 1);
+    const year = date.getFullYear();
+    const hours = pad(date.getHours());
+    const minutes = pad(date.getMinutes());
+
+    return `${day}_${month}_${year}_T_${hours}_${minutes}.txt`;
+};
+
 // Route to save data
 app.post('/save-data', (req, res) => {
   const { rows } = req.body;
   console.log('Received data to save:', rows);
   const date = new Date();
-  const fileName = `${date.toISOString().replace(/[:.]/g, '-')}.txt`;
-  
-  const dirPath = path.join(__dirname, 'Data');
+
+  const fileName = formatDate(date);
+
+  const dirPath = path.join(__dirname, 'data');
   const filePath = path.join(dirPath, fileName);
 
   // Ensure the data directory exists
