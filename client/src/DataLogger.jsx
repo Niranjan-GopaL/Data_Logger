@@ -1,3 +1,11 @@
+/*
+Add buttons for saving and loading default parameters.
+Add the functionality to handle clearing values with Alt + C.
+Handle the functionality for loading default parameters with Alt + W
+*/
+
+
+
 import React, { useState, useRef } from 'react';
 import './DataLogger.css';
 import { saveDataToFile, getFilteredRows, handleSort } from './ProcessData';

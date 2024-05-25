@@ -1,33 +1,59 @@
+/* DataLogger.css */
+
 .data-logger {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .controls {
+    margin-bottom: 20px;
+  }
+  
+  .controls input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .controls button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .controls button:hover {
+    background-color: #0056b3;
   }
   
   .row {
     display: flex;
-    gap: 10px;
-  }
-  
-  .row input {
-    padding: 5px;
-    font-size: 16px;
-  }
-  
-  .controls {
-    display: flex;
-    gap: 10px;
     margin-bottom: 10px;
   }
   
-  .controls input {
-    padding: 5px;
-    font-size: 16px;
+  .row input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
   
-  .controls button {
-    padding: 5px 10px;
-    font-size: 16px;
-    cursor: pointer;
+  .row input[type="text"]:last-child {
+    margin-right: 0;
   }
   
