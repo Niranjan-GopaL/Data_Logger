@@ -8,24 +8,42 @@ const DataLogger = () => {
   const rowRefs = useRef([]);
 
   const handleKeyDown = (e, index, field) => {
+
     console.log(`Key down: ${e.key}, Index: ${index}, Field: ${field}`);
-    if (e.altKey && e.key === 'n') {
+
+
+    if (e.altKey  && e.key === 'n') {
       setRows([...rows, { parameter: '', value: '' }]);
       console.log('New row added');
-    } else if (e.ctrlKey && e.altKey) {
+
+    } 
+    
+    else if (e.altKey && e.ctrlKey && e.key === 's') {
+
+        e.preventDefault();
+
+        saveDataToFile(rows);
+        console.log('Data saved to file');
+      }
+    
+    
+    else if (e.altKey) {
+
       const navigateKeys = { h: -1, l: 1, j: 1, k: -1 };
+
       if (navigateKeys[e.key] !== undefined) {
         const rowChange = e.key === 'j' || e.key === 'k';
+
+
         const newIndex = rowChange
           ? (index + navigateKeys[e.key] + rows.length) % rows.length
           : index;
+
         const newField = rowChange ? field : field === 'parameter' ? 'value' : 'parameter';
+        
+        
         rowRefs.current[newIndex][newField].focus();
         console.log(`Focus moved to: Index: ${newIndex}, Field: ${newField}`);
-      } else if (e.key === 's') {
-        e.preventDefault();
-        saveDataToFile(rows);
-        console.log('Data saved to file');
       }
     }
   };
