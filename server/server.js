@@ -26,7 +26,14 @@ app.post('/save-data', (req, res) => {
   console.log('Received data to save:', rows);
   const date = new Date();
   const fileName = `${date.toISOString().replace(/[:.]/g, '-')}.txt`;
-  const filePath = path.join(__dirname, 'data', fileName);
+  
+  const dirPath = path.join(__dirname, 'Data');
+  const filePath = path.join(dirPath, fileName);
+
+  // Ensure the data directory exists
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath);
+  }
 
   let fileContent = '';
   rows.forEach((row) => {
