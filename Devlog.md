@@ -1,4 +1,6 @@
-## Day - 1
+## THings to Implement
+- Write to a file
+- Have an option to define DEFAULY parameter names
 
 ### Problem to solve :-
 
