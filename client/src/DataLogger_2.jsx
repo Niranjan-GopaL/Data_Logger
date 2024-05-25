@@ -1,12 +1,13 @@
 /*
-Add buttons for saving and loading default parameters.
-Add the functionality to handle clearing values with Alt + C.
-Handle the functionality for loading default parameters with Alt + W
+- Add buttons for saving and loading default parameters.
+- Add the functionality to handle clearing values with Alt + C.
+- Handle the functionality for loading default parameters with Alt + W
 */
 
 import React, { useState, useRef, useEffect } from 'react';
 import './DataLogger.css';
-import { saveDataToFile, getFilteredRows, handleSort, saveDefaultParameters, loadDefaultParameters } from './ProcessData_2';
+import { saveDataToFile, getFilteredRows, handleSort, saveDefaultParameters, loadDefaultParameters } from './ProcessData';
+
 
 const DataLogger_2 = () => {
   const [rows, setRows] = useState([{ parameter: '', value: '' }]);
@@ -77,6 +78,7 @@ const DataLogger_2 = () => {
 
   return (
     <div className="data-logger">
+
       <div className="controls">
         <input
           type="text"
@@ -91,6 +93,9 @@ const DataLogger_2 = () => {
           Load Default Parameters
         </button>
       </div>
+
+
+
       {getFilteredRows(rows, filterText).map((row, index) => (
         <div key={index} className="row">
           <input
@@ -109,6 +114,7 @@ const DataLogger_2 = () => {
           />
         </div>
       ))}
+
     </div>
   );
 };

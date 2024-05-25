@@ -1,6 +1,6 @@
 ## Things to Implement
-- Write to a file [DONE SUCCESSFULLY]
-- Have an option to define DEFAULY parameter names
+- Write and read from file ; Client and Server Interaction [DONE_SUCCESSFULLY]
+- Have an option to define DEFAULY parameter names [DONE_SUCCESSFULLY]
 
 #### Additional
 - Date parameter and have an eay way to input date
@@ -8,6 +8,9 @@
 
 ### Problem to solve :-
 
+#### Simple error ; Took a while though
+
+```sh
 Received data to save: [
   { parameter: 'Age', value: '20' },
   { parameter: 'ID', value: '543' },
@@ -20,7 +23,7 @@ Error writing file: [Error: ENOENT: no such file or directory, open 'D:\Code Pra
   syscall: 'open',
   path: 'D:\\Code Practise\\Data_Logger\\server\\data\\2024-05-16T19-04-09-788Z.txt'
 }
-
+```
 
 
 
