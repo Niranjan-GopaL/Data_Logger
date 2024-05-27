@@ -1,0 +1,6 @@
+Name : Niranjan
+Age : 20
+Blood group : A-ve
+BMI : 16
+Roll No : 543
+Grade : A

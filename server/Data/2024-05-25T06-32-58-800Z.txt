@@ -1,0 +1,8 @@
+Name : Niranjan
+age : 20
+weight : 62.4
+Salary : 40
+Bonus : 2
+float : New
+wow : Jeans
+here : is

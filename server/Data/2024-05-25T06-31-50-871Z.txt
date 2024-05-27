@@ -1,0 +1,4 @@
+Name : Niranjan
+age : 20
+weight : 62.4
+Salary : 40

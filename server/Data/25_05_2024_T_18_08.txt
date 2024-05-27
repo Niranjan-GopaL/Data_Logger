@@ -1,0 +1,6 @@
+Name : Devika Gopal
+Age : 17
+Blood group : O+ve
+BMI : 15
+Roll No : 542
+Grade : A

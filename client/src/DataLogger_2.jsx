@@ -6,7 +6,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import './DataLogger.css';
-import { saveDataToFile, getFilteredRows, handleSort, saveDefaultParameters, loadDefaultParameters } from './ProcessData';
+import { saveDataToFile, getFilteredRows, handleSort, saveDefaultParameters, loadDefaultParameters } from './ProcessData_2';
 
 
 const DataLogger_2 = () => {
